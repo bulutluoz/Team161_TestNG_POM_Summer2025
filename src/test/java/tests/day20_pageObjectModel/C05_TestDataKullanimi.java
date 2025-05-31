@@ -3,6 +3,7 @@ package tests.day20_pageObjectModel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TestotomasyonuPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -32,8 +33,8 @@ public class C05_TestDataKullanimi {
 
 
         // 1- https://www.testotomasyonu.com/ anasayfasina gidin
-        Driver.getDriver().get("https://www.testotomasyonu.com/"); // Dinamik degil
-
+        // Driver.getDriver().get("https://www.testotomasyonu.com/"); // Dinamik degil
+        Driver.getDriver().get(ConfigReader.getProperty("toUrl")); // Dinamik
 
         // 2- account linkine basin
         TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
@@ -41,10 +42,14 @@ public class C05_TestDataKullanimi {
         ReusableMethods.bekle(2);
         testotomasyonuPage.accountLinki.click(); // Dinamik
         // 3- Kullanici email'i olarak gecerli email girin
-        testotomasyonuPage.emailKutusu.sendKeys("wise@gmail.com"); // Dinamik degil
+        // testotomasyonuPage.emailKutusu.sendKeys("wise@gmail.com"); // Dinamik degil
+        testotomasyonuPage.emailKutusu.sendKeys(ConfigReader.getProperty("toGecerliEmail")); // Dinamik
+
 
         // 4- Kullanici sifresi olarak gecerli password girin
-        testotomasyonuPage.passwordKutusu.sendKeys("123456"); // Dinamik degil
+        // testotomasyonuPage.passwordKutusu.sendKeys("123456"); // Dinamik degil
+        testotomasyonuPage.passwordKutusu.sendKeys(ConfigReader.getProperty("toGecerliPassword")); // Dinamik
+
 
         // 5- Login butonuna basarak login olun
         testotomasyonuPage.loginButonu.click(); // Dinamik
