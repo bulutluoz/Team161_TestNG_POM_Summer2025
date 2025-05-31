@@ -60,5 +60,8 @@ public class C02_PageClassKullanimi {
                                                 .getText();
 
         Assert.assertTrue(actualIsim.contains(expectedIsimIcerik));
+
+        // sayfayi kapatin
+        Driver.quitDriver();
     }
 }
