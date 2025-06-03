@@ -21,7 +21,7 @@ public class C01_TestDataKullanimi {
     public void pozitifLogintesti(){
         // 1- https://www.testotomasyonu.com/ anasayfasina gidin
         // Driver.getDriver().get("https://www.testotomasyonu.com/"); // Dinamik degil
-        Driver.getDriver().get(ConfigReader.getProperty("ToUrl")); // Dinamik
+        Driver.getDriver().get(ConfigReader.getProperty("toUrl")); // Dinamik
 
         // 2- account linkine basin
         TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
