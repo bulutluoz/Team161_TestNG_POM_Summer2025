@@ -32,5 +32,8 @@ public class ZeroWebappPage {
     @FindBy(id ="pay_bills_link")
     public WebElement payBillsLinki;
 
+    @FindBy(xpath = "//a[text()='Purchase Foreign Currency']")
+    public WebElement purchaseFCLinki;
+
 
 }

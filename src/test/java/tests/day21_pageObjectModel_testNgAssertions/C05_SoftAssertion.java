@@ -47,6 +47,8 @@ public class C05_SoftAssertion {
         zeroWebappPage.payBillsLinki.click();
 
         //11. “Purchase Foreign Currency” tusuna basin
+        zeroWebappPage.purchaseFCLinki.click();
+
         //12. Currency dropdown menusunun erisilebilir oldugunu dogrulayin
         //13. “Currency” dropdown menusunden Eurozone’u secin
         //14. "Eurozone (euro)" secildigini dogrulayin
