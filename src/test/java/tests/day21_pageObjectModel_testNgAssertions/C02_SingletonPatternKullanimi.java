@@ -1,4 +1,4 @@
-package tests.day21_pageObjectModel;
+package tests.day21_pageObjectModel_testNgAssertions;
 
 import org.testng.annotations.Test;
 import utilities.Driver;
