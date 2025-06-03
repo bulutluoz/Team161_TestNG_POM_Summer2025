@@ -10,8 +10,13 @@ import java.time.Duration;
 
 public class Driver {
 
-
-
+    private Driver(){
+        // driver class'indan obje olusturmasini engellemenin bir kac yontemi var
+        // POM dizayn edenler Singleton Pattern kullanmayi tercih etmistir
+        // Singleton Pattern obje olusturulmasini engellemek icin
+        // constructor'i gorunur hale getirip
+        // access modifier'ini private yapmaya denir
+    }
 
     public static WebDriver driver;
 
@@ -20,6 +25,10 @@ public class Driver {
         String kullanilacakBrowser = ConfigReader.getProperty("browser");
         // configuration properties dosyasindan browser tercihini aldik
 
+        // isterseniz bir emniyet sigortasi ekleyebiliriz
+         if(kullanilacakBrowser == null){
+             kullanilacakBrowser = "chrome";
+         }
 
         if (driver == null){
 

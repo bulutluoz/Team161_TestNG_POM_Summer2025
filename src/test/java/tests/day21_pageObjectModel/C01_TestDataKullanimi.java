@@ -19,6 +19,7 @@ public class C01_TestDataKullanimi {
 
     @Test
     public void pozitifLogintesti(){
+
         // 1- https://www.testotomasyonu.com/ anasayfasina gidin
         // Driver.getDriver().get("https://www.testotomasyonu.com/"); // Dinamik degil
         Driver.getDriver().get(ConfigReader.getProperty("toUrl")); // Dinamik
