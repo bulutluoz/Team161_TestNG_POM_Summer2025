@@ -1,0 +1,19 @@
+<!--
+    bir xml dosyasi
+    bizim adimiza TestNG'nin toplu olarak belirlenen dosyalari calistirmasini saglar
+
+    bu islemin dogru sekilde olmasi icin
+    1- her xml dosyasinin basina TestNG ile calismasini saglamak icin
+       <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">  yazmalisiniz
+
+    2- test hiyerarsisine uygun olarak
+       xml taglari ile calismasini istediginiz
+       test dosyalarini yazmalisiniz
+
+       test hiyerarsisi
+       - test suite
+       - test
+       - package, class, test method'u veya test gruplari olur
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
