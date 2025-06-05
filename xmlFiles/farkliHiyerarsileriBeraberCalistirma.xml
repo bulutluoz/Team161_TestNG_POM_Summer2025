@@ -31,7 +31,5 @@
             <class name="tests.day21_pageObjectModel_testNgAssertions.C02_SingletonPatternKullanimi"></class>
             <class name="tests.day21_pageObjectModel_testNgAssertions.C04_SoftAssertion"></class>
         </classes>
-        
-        
     </test>
 </suite>

@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    TestNG'de paralel calistirma
+    islem olarak cok basit sekilde ayarlanabilir
+    AMMMMAAAA maalesef randimanli calistigi SOYLENEMEZ
+
+    Yani her ne kadar mantik olarak cok guzel olsa da
+    TestNG'de paralel calistirmayi TAVSIYE ETMIYORUZ
+
+    ayarlama icin
+    suite tag'i icinde cok basit
+    2 tercih yapmaliyiz
+    - thread-count : ayni anda calisacak browser sayisi
+    - parallel : browser'lar arasindaki is bolusumu nasil olacak ?
+                 class'a gore mi, method'a gore mi
+                 yoksa her browser'in calistiracagi testlerin belli oldugu test bazinda mi?
+
+-->
+
+<suite name="Smoke Test Suite" thread-count="2" parallel="classes">
+    <test name="Smoke tests">
+
+        <classes>
+            <class name="tests.day19_testNG.C04_DependsOnMethods"></class>
+            <class name="tests.day20_pageObjectModel.C02_PageClassKullanimi"></class>
+            <class name="tests.day20_pageObjectModel.C03_PozitifLoginTesti"></class>
+            <class name="tests.day20_pageObjectModel.C04_NegatifLoginTesti"></class>
+            <class name="tests.day21_pageObjectModel_testNgAssertions.C03_HardAssert"></class>
+            <class name="tests.day21_pageObjectModel_testNgAssertions.C04_SoftAssertion"></class>
+        </classes>
+
+    </test>
+</suite>
