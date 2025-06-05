@@ -15,10 +15,14 @@
     - parallel : browser'lar arasindaki is bolusumu nasil olacak ?
                  class'a gore mi, method'a gore mi
                  yoksa her browser'in calistiracagi testlerin belli oldugu test bazinda mi?
+    - verbose : doldurulmasi zorunlu degildir
+                test failed oldugunda cikan kirmizi yazilarin daha az veya daha cok olmasini ayarlar
+                1- en az
+                10 - en cok olacak sekilde sayisal bir deger alir
 
 -->
 
-<suite name="Smoke Test Suite" thread-count="2" parallel="classes">
+<suite name="Smoke Test Suite" thread-count="2" parallel="classes" verbose="5">
     <test name="Smoke tests">
 
         <classes>
