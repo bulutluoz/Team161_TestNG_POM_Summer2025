@@ -57,7 +57,8 @@ public class C02_PageClassKullanimi {
 
         String expectedIsimIcerik = "phone";
         String actualIsim = testotomasyonuPage.ilkUrunSayfasindakiIsimElementi
-                                                .getText();
+                                                .getText()
+                                                .toLowerCase();
 
         Assert.assertTrue(actualIsim.contains(expectedIsimIcerik));
 

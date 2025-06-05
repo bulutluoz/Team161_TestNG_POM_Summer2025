@@ -14,6 +14,26 @@
        - test suite
        - test
        - package, class, test method'u veya test gruplari olur
+       
+        Gorev 1 : Smoke test icin, asagida belirlenen class'lari hergun calistirmamiz gerekiyor
+        day19 C04
+        day20 C02, C03, C04
+        day21 C03,C04
 -->
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Test Suite">
+    <test name="Smoke tests">
+        
+        <classes>
+            <class name="tests.day19_testNG.C04_DependsOnMethods"></class>
+            <class name="tests.day20_pageObjectModel.C02_PageClassKullanimi"></class>
+            <class name="tests.day20_pageObjectModel.C03_PozitifLoginTesti"></class>
+            <class name="tests.day20_pageObjectModel.C04_NegatifLoginTesti"></class>
+            <class name="tests.day21_pageObjectModel_testNgAssertions.C03_HardAssert"></class>
+            <class name="tests.day21_pageObjectModel_testNgAssertions.C04_SoftAssertion"></class>
+        </classes>
+        
+    </test>
+</suite>

@@ -37,6 +37,7 @@ public class C04_NegatifLoginTesti {
         //4- Login butonuna basarak login olmayi deneyin
         testotomasyonuPage.loginButonu.click();
 
+        ReusableMethods.bekle(1);
         //5- Basarili olarak giris yapilamadigini test edin
         Assert.assertTrue(testotomasyonuPage.emailKutusu.isDisplayed());
     }
