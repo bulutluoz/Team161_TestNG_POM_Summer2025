@@ -65,7 +65,7 @@ public class C01_RaporluAramaTesti extends TestBaseRapor {
         //    acilan sayfadaki urun isminde
         //    case sensitive olmadan aranacakKelime bulundugunu test edin
 
-        String expectedIsimIcerik = ConfigReader.getProperty("toAranacakKelime");
+        String expectedIsimIcerik = ConfigReader.getProperty("toAranacakKelime")+111;
         String actualIsim = testotomasyonuPage.ilkUrunSayfasindakiIsimElementi
                                                 .getText()
                                                 .toLowerCase();

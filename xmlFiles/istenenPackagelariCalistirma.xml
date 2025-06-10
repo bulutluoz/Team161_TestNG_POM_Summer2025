@@ -11,8 +11,8 @@
 <suite name="package test suite">
     <test name="package calistirma">
         <packages>
-            <package name="tests.day19_testNG"></package>
-            <package name="tests.day21_pageObjectModel_testNgAssertions"></package>
+            <package name="tests.day23_htmlReports_dataProvider"></package>
+
         </packages>
     </test>
 </suite>
