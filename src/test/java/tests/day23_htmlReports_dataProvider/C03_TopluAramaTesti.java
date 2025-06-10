@@ -3,6 +3,7 @@ package tests.day23_htmlReports_dataProvider;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.TestotomasyonuPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -15,6 +16,14 @@ public class C03_TopluAramaTesti {
 
     @Test
     public void topluAramaTesti(){
+        /*
+            Toplu test calistirdigimizda
+            failed olan ilk urun icin kod calistirmayi durdurur
+
+            eger tum urunleri test etmesini isterseniz
+            try-catch / softAssert olusturup
+            tum urunleri aratmasini saglayabiliriz
+         */
         // apple, shoe, java, samsung, dress, cokoprens, nutella
         List<String> aranacakUrunlerListesi = new ArrayList<>(Arrays.asList("apple", "shoe", "java", "samsung", "dress", "cokoprens", "nutella" ));
 
@@ -27,6 +36,7 @@ public class C03_TopluAramaTesti {
 
         // listedeki herbir urunu aratabilmek ve test yapmak icin loop lazim
         TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+        SoftAssert softAssert = new SoftAssert();
 
         for (int i = 0; i < aranacakUrunlerListesi.size() ; i++) {
 
@@ -34,11 +44,14 @@ public class C03_TopluAramaTesti {
             testotomasyonuPage.aramaKutusu.sendKeys(aranacakKelime + Keys.ENTER);
 
             String unExpectedAramaSonucu = ConfigReader.getProperty("toUnExpectedSonucYazisi");
+            testotomasyonuPage = new TestotomasyonuPage();
             String actualAramaSonucu = testotomasyonuPage.aramaSonucYaziElementi.getText();
 
-            Assert.assertNotEquals(actualAramaSonucu,unExpectedAramaSonucu);
+            softAssert.assertNotEquals(actualAramaSonucu,unExpectedAramaSonucu,aranacakKelime +" bulunamadi");
 
         }
+
+        softAssert.assertAll();
 
     }
 }
