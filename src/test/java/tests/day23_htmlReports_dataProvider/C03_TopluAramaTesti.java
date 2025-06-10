@@ -7,6 +7,7 @@ import org.testng.asserts.SoftAssert;
 import pages.TestotomasyonuPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,10 +42,14 @@ public class C03_TopluAramaTesti {
         for (int i = 0; i < aranacakUrunlerListesi.size() ; i++) {
 
             String aranacakKelime = aranacakUrunlerListesi.get(i);
+            testotomasyonuPage = new TestotomasyonuPage();
+            ReusableMethods.bekle(1);
             testotomasyonuPage.aramaKutusu.sendKeys(aranacakKelime + Keys.ENTER);
 
             String unExpectedAramaSonucu = ConfigReader.getProperty("toUnExpectedSonucYazisi");
+
             testotomasyonuPage = new TestotomasyonuPage();
+            ReusableMethods.bekle(1);
             String actualAramaSonucu = testotomasyonuPage.aramaSonucYaziElementi.getText();
 
             softAssert.assertNotEquals(actualAramaSonucu,unExpectedAramaSonucu,aranacakKelime +" bulunamadi");
